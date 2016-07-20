@@ -1,0 +1,15 @@
+[
+  {
+    "model": "socialaccount.socialapp",
+    "pk": 1,
+    "fields": {
+      "name": "Personal Activity Trainer",
+      "provider": "facebook",
+      "client_id": 1736760026576740,
+      "secret": "769794027652a947cbccb43156d2b42d",
+      "sites": [
+        1
+      ]
+    }
+  }
+]

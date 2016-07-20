@@ -41,13 +41,21 @@ DJANGO_APPS = (
 )
 THIRD_PARTY_APPS = (
     'crispy_forms',  # Form layouts
+
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+
     'allauth',  # registration
     'allauth.account',  # registration
+    'rest_auth.registration',
+
     'allauth.socialaccount',  # registration
-    'rest_framework',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+
     'corsheaders',
 )
-
 # Apps specific for this project go here.
 LOCAL_APPS = (
     # custom users app
@@ -219,7 +227,10 @@ AUTHENTICATION_BACKENDS = (
 # Some really nice defaults
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_EMAIL_REQUIRED = False
+SOCIALACCOUNT_QUERY_EMAIL = True
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'pat.users.adapters.AccountAdapter'
