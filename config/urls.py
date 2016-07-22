@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
 
     url(r'^users/', include('pat.users.urls', namespace='users')),
-    # url(r'^accounts/', include('allauth.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

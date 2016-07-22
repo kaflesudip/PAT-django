@@ -19,7 +19,7 @@ env = environ.Env()
 
 try:
     env.read_env(ROOT_DIR.file('.env'))
-except FileNotFoundError:
+except:
     pass
 
 # APP CONFIGURATION
@@ -256,3 +256,14 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 CORS_ORIGIN_ALLOW_ALL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    "REGISTER_SERIALIZER": 'pat.users.serializers.UserSerializer'
+}

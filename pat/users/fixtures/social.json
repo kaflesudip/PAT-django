@@ -11,5 +11,19 @@
         1
       ]
     }
+  },
+
+  {
+    "model": "socialaccount.socialapp",
+    "pk": 2,
+    "fields": {
+      "name": "Personal Activity Trainer",
+      "provider": "google",
+      "client_id": "303760359301-oeemf28rrecl0bnffu96brlpnkom60r0.apps.googleusercontent.com",
+      "secret": "9cXPOpp7MSqFkbPl5BqRFAdT",
+      "sites": [
+        1
+      ]
+    }
   }
 ]
