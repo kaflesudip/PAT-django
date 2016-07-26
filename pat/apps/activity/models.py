@@ -17,4 +17,4 @@ class Activity(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.user) + self.activity_type
+        return str(self.user) + self.activity_type__name
