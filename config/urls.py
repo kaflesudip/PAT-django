@@ -18,12 +18,14 @@ urlpatterns = [
 
     # User management
 
-    # Your stuff: custom urls includes go here
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-
-    url(r'^users/', include('pat.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^users/', include('pat.users.urls', namespace='users')),
+
+    # Your stuff: custom urls includes go here
+
+    url(r'^activity/', include('pat.apps.activity.urls', namespace='activity')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

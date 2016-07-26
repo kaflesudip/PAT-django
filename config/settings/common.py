@@ -61,6 +61,9 @@ LOCAL_APPS = (
     # custom users app
     'pat.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'pat.apps',
+    'pat.apps.activity',
+
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
